@@ -12,7 +12,7 @@
 
 <meta name="author" content="Nima Hejazi and Jeremy Coyle" />
 
-<meta name="date" content="2020-02-26" />
+<meta name="date" content="2020-06-23" />
 
 <title>Fitting the Highly Adaptive Lasso with hal9001</title>
 
@@ -303,7 +303,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">Fitting the Highly Adaptive Lasso with <code>hal9001</code></h1>
 <h4 class="author"><a href="https://nimahejazi.org">Nima Hejazi</a> and <a href="https://github.com/jeremyrcoyle">Jeremy Coyle</a></h4>
-<h4 class="date">2020-02-26</h4>
+<h4 class="date">2020-06-23</h4>
 
 
 
@@ -343,7 +343,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <h2>Using the Highly Adaptive Lasso</h2>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">library</span>(hal9001)</a></code></pre></div>
 <pre><code>## Loading required package: Rcpp</code></pre>
-<pre><code>## hal9001 v0.2.5: The Scalable Highly Adaptive Lasso</code></pre>
+<pre><code>## hal9001 v0.2.6: The Scalable Highly Adaptive Lasso</code></pre>
 <!-- ### Fitting the HAL model: "lassi" -->
 <!-- Our custom implementation of the Lasso has been dubbed _lassi_. For the purposes -->
 <!-- of HAL, it is faster than using the standard `glmnet` approach, but it is not -->
@@ -363,12 +363,12 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <pre><code>## [1] &quot;Without your space helmet, Dave. You're going to find that rather difficult.&quot;</code></pre>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1">hal_fit<span class="op">$</span>times</a></code></pre></div>
 <pre><code>##                   user.self sys.self elapsed user.child sys.child
-## enumerate_basis       0.004    0.000   0.003          0         0
-## design_matrix         0.004    0.000   0.005          0         0
-## remove_duplicates     0.007    0.000   0.011          0         0
-## reduce_basis          0.000    0.000   0.000          0         0
-## lasso                 0.770    0.015   0.787          0         0
-## total                 0.785    0.015   0.806          0         0</code></pre>
+## enumerate_basis       0.003        0   0.003          0         0
+## design_matrix         0.005        0   0.005          0         0
+## remove_duplicates     0.006        0   0.006          0         0
+## reduce_basis          0.000        0   0.000          0         0
+## lasso                 0.846        0   0.846          0         0
+## total                 0.860        0   0.860          0         0</code></pre>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1">hal_fit</a></code></pre></div>
 <pre><code>## $call
 ## fit_hal(X = x, Y = y, fit_type = &quot;glmnet&quot;)
@@ -16627,12 +16627,12 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 ## 
 ## $times
 ##                   user.self sys.self elapsed user.child sys.child
-## enumerate_basis       0.004    0.000   0.003          0         0
-## design_matrix         0.004    0.000   0.005          0         0
-## remove_duplicates     0.007    0.000   0.011          0         0
-## reduce_basis          0.000    0.000   0.000          0         0
-## lasso                 0.770    0.015   0.787          0         0
-## total                 0.785    0.015   0.806          0         0
+## enumerate_basis       0.003        0   0.003          0         0
+## design_matrix         0.005        0   0.005          0         0
+## remove_duplicates     0.006        0   0.006          0         0
+## reduce_basis          0.000        0   0.000          0         0
+## lasso                 0.846        0   0.846          0         0
+## total                 0.860        0   0.860          0         0
 ## 
 ## $lambda_star
 ## [1] 0.01537728
@@ -16776,11 +16776,11 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1">hal_fit_reduced<span class="op">$</span>times</a></code></pre></div>
 <pre><code>##                   user.self sys.self elapsed user.child sys.child
 ## enumerate_basis       0.002        0   0.002          0         0
-## design_matrix         0.003        0   0.003          0         0
+## design_matrix         0.004        0   0.003          0         0
 ## remove_duplicates     0.002        0   0.002          0         0
 ## reduce_basis          0.004        0   0.004          0         0
-## lasso                 0.276        0   0.276          0         0
-## total                 0.283        0   0.283          0         0</code></pre>
+## lasso                 0.317        0   0.318          0         0
+## total                 0.325        0   0.325          0         0</code></pre>
 <p>In the above, all basis functions with fewer than 7.0710678% of observations meeting the criterion imposed are automatically removed prior to the Lasso step of fitting the HAL regression. The results appear below</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1">hal_fit_reduced</a></code></pre></div>
 <pre><code>## $call
@@ -32874,11 +32874,11 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 ## $times
 ##                   user.self sys.self elapsed user.child sys.child
 ## enumerate_basis       0.002        0   0.002          0         0
-## design_matrix         0.003        0   0.003          0         0
+## design_matrix         0.004        0   0.003          0         0
 ## remove_duplicates     0.002        0   0.002          0         0
 ## reduce_basis          0.004        0   0.004          0         0
-## lasso                 0.276        0   0.276          0         0
-## total                 0.283        0   0.283          0         0
+## lasso                 0.317        0   0.318          0         0
+## total                 0.325        0   0.325          0         0
 ## 
 ## $lambda_star
 ## [1] 0.01073374

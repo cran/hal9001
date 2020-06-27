@@ -1,6 +1,6 @@
 Package: hal9001
 Title: The Scalable Highly Adaptive Lasso
-Version: 0.2.5
+Version: 0.2.6
 Authors@R: c(
   person("Jeremy", "Coyle", email = "jeremyrcoyle@gmail.com",
          role = c("aut", "cre"),
@@ -35,15 +35,15 @@ URL: https://github.com/tlverse/hal9001
 BugReports: https://github.com/tlverse/hal9001/issues
 Encoding: UTF-8
 LazyData: true
-Imports: Matrix, stats, utils, methods, assertthat, origami (>= 0.8.1),
+Imports: Matrix, stats, utils, methods, assertthat, origami (>= 1.0.3),
         glmnet
 Suggests: testthat, knitr, rmarkdown, microbenchmark, future, ggplot2,
         dplyr, tidyr, stringr, survival, data.table, SuperLearner
 LinkingTo: Rcpp, RcppEigen
 VignetteBuilder: knitr
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.0
 NeedsCompilation: yes
-Packaged: 2020-02-26 18:32:49 UTC; nsh
+Packaged: 2020-06-24 02:22:52 UTC; nsh
 Author: Jeremy Coyle [aut, cre] (<https://orcid.org/0000-0002-9874-6649>),
   Nima Hejazi [aut] (<https://orcid.org/0000-0002-7127-2789>),
   David Benkeser [ctb] (<https://orcid.org/0000-0002-1019-8343>),
@@ -53,4 +53,4 @@ Author: Jeremy Coyle [aut, cre] (<https://orcid.org/0000-0002-9874-6649>),
     (<https://orcid.org/0000-0003-1432-5511>)
 Maintainer: Jeremy Coyle <jeremyrcoyle@gmail.com>
 Repository: CRAN
-Date/Publication: 2020-03-05 20:20:02 UTC
+Date/Publication: 2020-06-27 04:50:07 UTC
