@@ -6,18 +6,19 @@
 [![Travis-CI Build
 Status](https://travis-ci.org/tlverse/hal9001.svg?branch=master)](https://travis-ci.org/tlverse/hal9001)
 [![AppVeyor Build
-Status](https://ci.appveyor.com/api/projects/status/github/jeremyrcoyle/hal9001?branch=master&svg=true)](https://ci.appveyor.com/project/jeremyrcoyle/hal9001)
+Status](https://ci.appveyor.com/api/projects/status/github/tlverse/hal9001?branch=master&svg=true)](https://ci.appveyor.com/project/tlverse/hal9001)
 [![Coverage
 Status](https://img.shields.io/codecov/c/github/tlverse/hal9001/master.svg)](https://codecov.io/github/tlverse/hal9001?branch=master)
-[![CRAN](http://www.r-pkg.org/badges/version/hal9001)](http://www.r-pkg.org/pkg/hal9001)
+[![CRAN](https://www.r-pkg.org/badges/version/hal9001)](https://www.r-pkg.org/pkg/hal9001)
 [![CRAN
 downloads](https://cranlogs.r-pkg.org/badges/hal9001)](https://CRAN.R-project.org/package=hal9001)
 [![Project Status: Active – The project has reached a stable, usable
 state and is being actively
-developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![License: GPL
 v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3558313.svg)](https://doi.org/10.5281/zenodo.3558313)
+[![DOI](https://joss.theoj.org/papers/10.21105/joss.02526/status.svg)](https://doi.org/10.21105/joss.02526)
 
 > The *Scalable* Highly Adaptive Lasso
 
@@ -83,7 +84,7 @@ predictions via Highly Adaptive Lasso regression:
 # load the package and set a seed
 library(hal9001)
 #> Loading required package: Rcpp
-#> hal9001 v0.2.6: The Scalable Highly Adaptive Lasso
+#> hal9001 v0.2.8: The Scalable Highly Adaptive Lasso
 set.seed(385971)
 
 # simulate data
@@ -97,12 +98,12 @@ hal_fit <- fit_hal(X = x, Y = y)
 #> [1] "I'm sorry, Dave. I'm afraid I can't do that."
 hal_fit$times
 #>                   user.self sys.self elapsed user.child sys.child
-#> enumerate_basis       0.001    0.000   0.001          0         0
-#> design_matrix         0.002    0.000   0.002          0         0
-#> remove_duplicates     0.004    0.000   0.004          0         0
+#> enumerate_basis       0.003    0.000   0.003          0         0
+#> design_matrix         0.003    0.000   0.002          0         0
 #> reduce_basis          0.000    0.000   0.000          0         0
-#> lasso                 0.325    0.005   0.330          0         0
-#> total                 0.332    0.005   0.337          0         0
+#> remove_duplicates     0.010    0.000   0.011          0         0
+#> lasso                 0.289    0.012   0.304          0         0
+#> total                 0.306    0.012   0.321          0         0
 
 # training sample prediction
 preds <- predict(hal_fit, new_data = x)
@@ -123,18 +124,29 @@ prior to submitting a pull request.
 
 ## Citation
 
-After using the `hal9001` R package, please cite the following:
+After using the `hal9001` R package, please cite both of the following:
 
 ``` 
-    @manual{coyle2020hal9001,
+    @software{coyle2020hal9001-rpkg,
       author = {Coyle, Jeremy R and Hejazi, Nima S and {van der Laan}, Mark
         J},
       title = {{hal9001}: The scalable highly adaptive lasso},
       year  = {2020},
-      howpublished = {\url{https://github.com/tlverse/hal9001}},
-      note = {{R} package version 0.2.6},
       url = {https://doi.org/10.5281/zenodo.3558313},
       doi = {10.5281/zenodo.3558313}
+      note = {{R} package version 0.2.7}
+    }
+
+    @article{hejazi2020hal9001-joss,
+      author = {Hejazi, Nima S and Coyle, Jeremy R and {van der Laan}, Mark
+        J},
+      title = {{hal9001}: Scalable highly adaptive lasso regression in
+        {R}},
+      year  = {2020},
+      url = {https://doi.org/10.21105/joss.02526},
+      doi = {10.21105/joss.02526},
+      journal = {Journal of Open Source Software},
+      publisher = {The Open Journal}
     }
 ```
 
@@ -142,7 +154,7 @@ After using the `hal9001` R package, please cite the following:
 
 ## License
 
-© 2017-2020 [Jeremy R. Coyle](https://github.com/tlverse) & [Nima S.
+© 2017-2021 [Jeremy R. Coyle](https://github.com/tlverse) & [Nima S.
 Hejazi](https://nimahejazi.org)
 
 The contents of this repository are distributed under the GPL-3 license.
@@ -167,7 +179,7 @@ and Advanced Analytics (DSAA)*. IEEE.
 
 Bibaut, Aurélien F, and Mark J van der Laan. 2019. “Fast Rates for
 Empirical Risk Minimization over Càdlàg Functions with Bounded Sectional
-Variation Norm.” *arXiv Preprint arXiv:1907.09244*.
+Variation Norm.” <https://arxiv.org/abs/1907.09244>.
 
 </div>
 
@@ -175,7 +187,7 @@ Variation Norm.” *arXiv Preprint arXiv:1907.09244*.
 
 Ertefaie, Ashkan, Nima S Hejazi, and Mark J van der Laan. 2020.
 “Nonparametric Inverse Probability Weighted Estimators Based on the
-Highly Adaptive Lasso.” <http://arxiv.org/abs/2005.11303>.
+Highly Adaptive Lasso.” <https://arxiv.org/abs/2005.11303>.
 
 </div>
 
@@ -183,15 +195,15 @@ Highly Adaptive Lasso.” <http://arxiv.org/abs/2005.11303>.
 
 van der Laan, Mark J. 2017a. “A Generally Efficient Targeted Minimum
 Loss Based Estimator Based on the Highly Adaptive Lasso.” *The
-International Journal of Biostatistics*. De Gruyter.
+International Journal of Biostatistics*.
 <https://doi.org/10.1515/ijb-2015-0097>.
 
 </div>
 
 <div id="ref-vdl2017finite">
 
-———. 2017b. “Finite Sample Inference for Targeted Learning.” *ArXiv
-E-Prints*.
+———. 2017b. “Finite Sample Inference for Targeted Learning.”
+<https://arxiv.org/abs/1708.09502>.
 
 </div>
 
@@ -199,7 +211,8 @@ E-Prints*.
 
 van der Laan, Mark J, David Benkeser, and Weixin Cai. 2019. “Efficient
 Estimation of Pathwise Differentiable Target Parameters with the
-Undersmoothed Highly Adaptive Lasso.” *arXiv Preprint arXiv:1908.05607*.
+Undersmoothed Highly Adaptive Lasso.”
+<https://arxiv.org/abs/1908.05607>.
 
 </div>
 
@@ -207,7 +220,7 @@ Undersmoothed Highly Adaptive Lasso.” *arXiv Preprint arXiv:1908.05607*.
 
 van der Laan, Mark J, and Aurélien F Bibaut. 2017. “Uniform Consistency
 of the Highly Adaptive Lasso Estimator of Infinite-Dimensional
-Parameters.” *arXiv Preprint arXiv:1709.06256*.
+Parameters.” <https://arxiv.org/abs/1709.06256>.
 
 </div>
 

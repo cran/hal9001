@@ -1,6 +1,6 @@
 Package: hal9001
 Title: The Scalable Highly Adaptive Lasso
-Version: 0.2.6
+Version: 0.2.7
 Authors@R: c(
   person("Jeremy", "Coyle", email = "jeremyrcoyle@gmail.com",
          role = c("aut", "cre"),
@@ -13,6 +13,9 @@ Authors@R: c(
          comment = c(ORCID = "0000-0002-1019-8343")),
   person("Oleg", "Sofrygin", email = "oleg.sofrygin@gmail.com",
          role = "ctb"),
+  person("Rachael", "Phillips", email = "rachaelvphillips@berkeley.edu",
+         role = "ctb",
+         comment = c(ORCID = "0000-0002-8474-591X")),
   person("Weixin", "Cai", email = "wcai@berkeley.edu",
          role = "ctb",
          comment = c(ORCID = "0000-0003-2680-3066")),
@@ -36,21 +39,22 @@ BugReports: https://github.com/tlverse/hal9001/issues
 Encoding: UTF-8
 LazyData: true
 Imports: Matrix, stats, utils, methods, assertthat, origami (>= 1.0.3),
-        glmnet
+        glmnet, data.table
 Suggests: testthat, knitr, rmarkdown, microbenchmark, future, ggplot2,
-        dplyr, tidyr, stringr, survival, data.table, SuperLearner
+        dplyr, tidyr, stringr, survival, SuperLearner
 LinkingTo: Rcpp, RcppEigen
 VignetteBuilder: knitr
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 NeedsCompilation: yes
-Packaged: 2020-06-24 02:22:52 UTC; nsh
+Packaged: 2021-01-21 20:57:18 UTC; nsh
 Author: Jeremy Coyle [aut, cre] (<https://orcid.org/0000-0002-9874-6649>),
   Nima Hejazi [aut] (<https://orcid.org/0000-0002-7127-2789>),
   David Benkeser [ctb] (<https://orcid.org/0000-0002-1019-8343>),
   Oleg Sofrygin [ctb],
+  Rachael Phillips [ctb] (<https://orcid.org/0000-0002-8474-591X>),
   Weixin Cai [ctb] (<https://orcid.org/0000-0003-2680-3066>),
   Mark van der Laan [aut, cph, ths]
     (<https://orcid.org/0000-0003-1432-5511>)
 Maintainer: Jeremy Coyle <jeremyrcoyle@gmail.com>
 Repository: CRAN
-Date/Publication: 2020-06-27 04:50:07 UTC
+Date/Publication: 2021-01-22 05:40:12 UTC

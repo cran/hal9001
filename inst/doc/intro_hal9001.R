@@ -24,15 +24,15 @@ hal_fit <- fit_hal(X = x, Y = y, fit_type = "glmnet")
 hal_fit$times
 
 ## ----results-hal-glmnet-------------------------------------------------------
-hal_fit
+summary(hal_fit)$table
 
 ## ----fit-hal-reduced----------------------------------------------------------
-hal_fit_reduced <- fit_hal(X = x, Y = y, fit_type = "lassi",
-                           reduce_basis = 1/sqrt(length(y)))
+hal_fit_reduced <- fit_hal(X = x, Y = y, fit_type = "glmnet",
+                           reduce_basis = 1 / sqrt(length(y)))
 hal_fit_reduced$times
 
 ## ----results-hal-reduced------------------------------------------------------
-hal_fit_reduced
+summary(hal_fit_reduced)$table
 
 ## ----eval-mse-----------------------------------------------------------------
 # training sample prediction for HAL vs HAL9000
