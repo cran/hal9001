@@ -1,6 +1,6 @@
-68393b3159be3316dfe071268a5eb7ff *DESCRIPTION
+6e7a1ed5cadc7ae0a4ab2429d689ee8d *DESCRIPTION
 bb2388e21eff6b470ea2431088f54a99 *NAMESPACE
-10f3d6f19fc97a49262aa138111722bc *NEWS.md
+f669340b009a1339bd9088fb321c8085 *NEWS.md
 db05553eab5ef28e671e6c6ea5641ae0 *R/RcppExports.R
 24f667c36f0f842b5ff13092b4fdf0c2 *R/cv_lasso.R
 2edc79aacd514970c8b39fb4300bb78d *R/cv_lasso_early_stopping.R
@@ -18,14 +18,14 @@ a2508e740fcdc449eda4728421f61672 *R/sl_hal9001.R
 b93f6588a9c2f62559dd15ce4e7d871e *R/squash_hal.R
 b41a4cd07749f031a1c484748c303ab8 *R/summary.R
 96cbd54decbb871b057e42ce2fccf75e *R/zzz.R
-b545f8f1823c661848b1421b858025e2 *README.md
-b1982438402330d53efcde9515b6aabb *build/vignette.rds
+bd07e2885a51e4bf1e43bb4c48c559f2 *README.md
+f4cc5583566b0a5259fcaad59b0cf668 *build/vignette.rds
 772fd9560345439abe216d99f605dc7c *data/hal_quotes.rda
 7c93ec0e8c8ef49a9decc4b71cfba8a8 *inst/CITATION
 f80801be4303247519832ea28ae64c98 *inst/REFERENCES.bib
 da3415cbb71fd63c2f157618afaacf78 *inst/doc/intro_hal9001.R
 ee391e16bb9db3a26734d1fa733a4395 *inst/doc/intro_hal9001.Rmd
-84ba5d521401304528acb38b0949a140 *inst/doc/intro_hal9001.html
+df5a86382225baaab7a494472581ecb0 *inst/doc/intro_hal9001.html
 1e5a71fee2df4a22ef2bc078889f5665 *man/SL.hal9001.Rd
 7f637198e6639001a3aa87b44410d901 *man/apply_copy_map.Rd
 30da3a45486be275ec1abd3dbba1d669 *man/as_dgCMatrix.Rd
@@ -92,6 +92,6 @@ f888bc48e3fc5c7ee42c95e7b2bb363c *tests/testthat/test-hal_comparison.R
 85073985b34beb8daf3a873bdf87d9d4 *tests/testthat/test-sl_ecpolley.R
 996041c69b1df395950e16e9ead2c440 *tests/testthat/test-stat_performance.R
 8901c1f7aa50a406a7fe983a48a19b59 *tests/testthat/test-summary.R
-7dbe81da8369e8ff5afcfe28addfa669 *tests/testthat/test-varselect_hal.R
+201687f8e2aaf9331953330ee2b16037 *tests/testthat/test-varselect_hal.R
 8240aa32e4f09989cf60961331f17525 *tests/testthat/test-x_unpenalized.R
 ee391e16bb9db3a26734d1fa733a4395 *vignettes/intro_hal9001.Rmd
